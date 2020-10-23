@@ -8,6 +8,7 @@ class EmailAddressParser
 
   def parse
     array = @email_addresses.split()
+    array.gsub(",", "")
     array.uniq
   end
 
