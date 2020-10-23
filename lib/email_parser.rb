@@ -8,7 +8,7 @@ class EmailAddressParser
 
   def parse
     array = @email_addresses.split()
-    array.gsub(",", "")
+    new_array = array.collect {|email| email.gsub(",", "")}
     array.uniq
   end
 
